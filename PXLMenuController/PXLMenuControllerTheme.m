@@ -13,7 +13,7 @@
 + (instancetype)defaultTheme {
 	PXLMenuControllerTheme *theme = [PXLMenuControllerTheme new];
 	
-	theme.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+	theme.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
 	theme.menuItemFont = [UIFont systemFontOfSize:18];
 	theme.menuItemHeight = 44.f;
 	theme.menuItemTextAlignment = NSTextAlignmentLeft;

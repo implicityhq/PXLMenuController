@@ -13,7 +13,7 @@
 /*
  The PXLMenuController background color.
  
- Default: [UIColor colorWithWhite:1.0 alpha:0.8]
+ Default: [UIColor colorWithWhite:0.0 alpha:0.5]
  */
 @property (nonatomic) UIColor *backgroundColor;
 
