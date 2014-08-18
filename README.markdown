@@ -4,7 +4,7 @@ PXLMenuController
 An easy way to present your users with a menu controller.
 
 ## Screenshots
-![Screenshot of PXLMenuController](http://github.com/jasonsilberman/PXLMenuController/blob/master/screenshot.png)
+![Screenshot of PXLMenuController](https://github.com/jasonsilberman/PXLMenuController/blob/master/screenshot.png)
 
 ## Documentation
 You can check out the .h file [here](http://github.com/jasonsilberman/PXLMenuController/blob/master/PXLMenuController/PXLMenuController.h), or over on [Cocoadocs](http://cocoadocs.org/docsets/PXLMenuController/).
