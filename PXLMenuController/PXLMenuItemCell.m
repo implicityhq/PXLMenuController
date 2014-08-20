@@ -11,7 +11,6 @@
 @implementation PXLMenuItemCell
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-	NSLog(@"checkd");
 	return NO;
 }
 

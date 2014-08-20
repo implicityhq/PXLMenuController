@@ -89,6 +89,8 @@ NSString *const PXLMenuControllerViewAlreadyLoadedException = @"PXLMenuControlle
 	cell.textLabel.text = item.title;
 	cell.textLabel.font = self.theme.menuItemFont;
 	cell.textLabel.textAlignment = self.theme.menuItemTextAlignment;
+	cell.textLabel.textColor = item.textColor;
+	cell.textLabel.highlightedTextColor = item.selectedTextColor;
 	
 	cell.selectedBackgroundView = ({
 		UIView *view = [UIView new];

@@ -15,6 +15,8 @@
 	item.title = title;
 	item.tintColor = tintColor;
 	item.actionBlock = actionBlock;
+	item.textColor = [UIColor blackColor];
+	item.selectedTextColor = [UIColor whiteColor];
 	return item;
 }
 

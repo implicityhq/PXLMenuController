@@ -24,6 +24,20 @@ typedef void(^PXLActionBlock)(void);
 @property (nonatomic) UIColor *tintColor;
 
 /*
+ The textColor of the PXLMenuItem.
+ 
+ Default: [UIColor blackColor]
+ */
+@property (nonatomic) UIColor *textColor;
+
+/*
+ The textColor of the PXLMenuItem when selected.
+ 
+ Default: [UIColor whiteColor]
+ */
+@property (nonatomic) UIColor *selectedTextColor;
+
+/*
  The block to be called when an item is selected.
  */
 @property (nonatomic, assign) PXLActionBlock actionBlock;
