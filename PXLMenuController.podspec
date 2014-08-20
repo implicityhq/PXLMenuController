@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'PXLMenuController'
-  spec.version  = '1.0.1'
+  spec.version  = '1.0.2'
   spec.summary  = 'An easy way to present your users with a menu controller.'
   spec.homepage = 'https://github.com/jasonsilberman/PXLMenuController'
   spec.author = { 'Jason Silberman' => 'j@j99.co' }
