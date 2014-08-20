@@ -40,7 +40,7 @@ typedef void(^PXLActionBlock)(void);
 /*
  The block to be called when an item is selected.
  */
-@property (nonatomic, assign) PXLActionBlock actionBlock;
+@property (nonatomic, copy) PXLActionBlock actionBlock;
 
 /*
  Initialize a PXLMenuItem.
