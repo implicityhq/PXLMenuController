@@ -51,8 +51,7 @@
 				break;
 			case PXLMenuControllerPlacementRight:
 				menuController.tableView.contentInset = UIEdgeInsetsMake(((CGRectGetHeight(containerView.frame) - neededTableViewHeight) / 2), 0, 0, 0);
-				menuController.view.frame = CGRectMake(containerView.frame.size.width - neededTableViewHeight
-													   , containerView.frame.origin.y, containerView.frame.size.width, containerView.frame.size.height);
+				menuController.view.frame = CGRectMake(containerView.frame.size.width - neededTableViewHeight, containerView.frame.origin.y, containerView.frame.size.width, containerView.frame.size.height);
 				break;
 			case PXLMenuControllerPlacementLeft:
 				menuController.tableView.contentInset = UIEdgeInsetsMake(((CGRectGetHeight(containerView.frame) - neededTableViewHeight) / 2), 0, 0, 0);
