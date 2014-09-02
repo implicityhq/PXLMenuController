@@ -147,9 +147,16 @@ NSString *const PXLMenuControllerViewAlreadyLoadedException = @"PXLMenuControlle
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-	if (! [NSStringFromClass(touch.view.class) isEqualToString:@"UITableViewWrapperView"]) {
-        return NO;
-    }
+	if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
+		if (! [NSStringFromClass(touch.view.class) isEqualToString:@"UITableViewWrapperView"]) {
+			return NO;
+		}
+	} else {
+		if (! [NSStringFromClass(touch.view.class) isEqualToString:@"UITableView"]) {
+			return NO;
+		}
+	}
+	
 	
     return YES;
 }
