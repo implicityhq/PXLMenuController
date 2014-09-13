@@ -41,6 +41,8 @@
 - (void)go {
 	PXLMenuController *controller = [[PXLMenuController alloc] initWithItems:nil placement:PXLMenuControllerPlacementBottom];
 	
+	controller.title = @"How do you like this?"; // Optional
+	
 	PXLMenuItem *item = [PXLMenuItem menuItemWithTitle:@"Horay!" tintColor:[UIColor greenColor] action:^{
 		NSLog(@"Horay tapped!");
 	}];

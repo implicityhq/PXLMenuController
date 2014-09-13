@@ -17,6 +17,7 @@
 	theme.menuItemFont = [UIFont systemFontOfSize:18];
 	theme.menuItemHeight = 44.f;
 	theme.menuItemTextAlignment = NSTextAlignmentLeft;
+	theme.titleColor = [UIColor colorWithWhite:0.75 alpha:1.0];
 	
 	return theme;
 }

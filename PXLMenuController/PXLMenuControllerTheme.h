@@ -39,6 +39,13 @@
 @property (nonatomic, assign) NSTextAlignment menuItemTextAlignment;
 
 /*
+ The PXLMenuController's title color.
+ 
+ Default: [UIColor colorWithWhite:0.75 alpha:1.0]
+ */
+@property (nonatomic) UIColor *titleColor;
+
+/*
  The default theme to be used if none is set.
  */
 + (instancetype)defaultTheme;

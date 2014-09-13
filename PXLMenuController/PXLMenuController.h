@@ -40,6 +40,11 @@ typedef NS_ENUM(NSInteger, PXLMenuControllerPlacement) {
 @property (nonatomic) PXLMenuControllerTheme *theme;
 
 /*
+ Title
+ */
+@property (nonatomic) NSString *title;
+
+/*
  Initialize PXLMenuController
  
  @param items An array of PXLMenuItems.

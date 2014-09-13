@@ -8,6 +8,14 @@
 
 NSString *const PXLMenuControllerViewAlreadyLoadedException = @"PXLMenuControllerViewAlreadyLoadedException";
 
+BOOL isiOS8() {
+	#ifdef NSFoundationVersionNumber_iOS_7_1
+		return YES;
+	#else
+		return NO;
+	#endif
+}
+
 #import "PXLMenuController.h"
 
 #import "PXLMenuItemCell.h"
@@ -62,6 +70,22 @@ NSString *const PXLMenuControllerViewAlreadyLoadedException = @"PXLMenuControlle
 	UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backdropTapped:)];
 	gestureRecognizer.delegate = self;
 	[self.view addGestureRecognizer:gestureRecognizer];
+	
+	if (isiOS8()) {
+		self.tableView.scrollEnabled = NO;
+	}
+	
+	if (self.title) {
+		CGRect requiredRect = [self.title boundingRectWithSize:CGSizeMake(CGRectGetWidth(self.view.bounds), CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:@{NSFontAttributeName : self.theme.menuItemFont} context:nil];
+		NSInteger padding = 10;
+		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(padding, -(CGRectGetHeight(requiredRect) + padding), CGRectGetWidth(requiredRect), CGRectGetHeight(requiredRect))];
+		label.backgroundColor = [UIColor clearColor];
+		label.font = self.theme.menuItemFont;
+		label.text = self.title;
+		label.textColor = self.theme.titleColor;
+		label.textAlignment = self.theme.menuItemTextAlignment;
+		[self.view addSubview:label];
+	}
 }
 
 #pragma mark - Actions
@@ -147,16 +171,15 @@ NSString *const PXLMenuControllerViewAlreadyLoadedException = @"PXLMenuControlle
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-	#ifdef NSFoundationVersionNumber_iOS_7_1
+	if (isiOS8()) {
 		if (! [NSStringFromClass(touch.view.class) isEqualToString:@"UITableView"]) {
 			return NO;
 		}
-	#else
+	} else {
 		if (! [NSStringFromClass(touch.view.class) isEqualToString:@"UITableViewWrapperView"]) {
 			return NO;
 		}
-	#endif
-	
+	}
 	
     return YES;
 }

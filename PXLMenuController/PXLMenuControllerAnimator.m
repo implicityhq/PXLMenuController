@@ -72,17 +72,6 @@
 	} else {
 		[UIView animateWithDuration:[self transitionDuration:transitionContext] / 2.15 animations:^{
 			menuController.view.layer.opacity = 0.f;
-//			switch (menuController.placement) {
-//				case PXLMenuControllerPlacementBottom:
-//					menuController.view.frame = CGRectMake(0, CGRectGetHeight(containerView.frame), CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
-//					break;
-//				case PXLMenuControllerPlacementRight:
-//					menuController.view.frame = CGRectMake(CGRectGetWidth(containerView.frame), 0, CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
-//					break;
-//				case PXLMenuControllerPlacementLeft:
-//					menuController.view.frame = CGRectMake(-CGRectGetWidth(containerView.frame), 0, CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
-//					break;
-//			}
 		} completion:^(BOOL finished) {
 			[transitionContext completeTransition:finished];
 		}];
