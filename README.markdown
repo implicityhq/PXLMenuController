@@ -46,6 +46,9 @@ PXLMenuController *controller = [[PXLMenuController alloc] initWithItems:@[item]
 // Set the theme (optional). It will use the `defaultTheme` if none is set.
 controller.theme = [PXLMenuControllerTheme defaultTheme];
 
+// Set an optional title.
+controller.title = @"How do you like this?";
+
 // Create another item
 item = [PXLMenuItem menuItemWithTitle:@"Eh..." tintColor:[UIColor orangeColor] action:^{
 	NSLog(@"Eh Tapped");
